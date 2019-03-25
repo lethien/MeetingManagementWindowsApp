@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 namespace ProjectTeam04TermProject
 {
-    static class MeetingRoomBookingProgram
-    {
+    static class MeetingManagementProgram
+    {        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +16,7 @@ namespace ProjectTeam04TermProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-        }
+            Application.Run(new MainForm());            
+        }        
     }
 }

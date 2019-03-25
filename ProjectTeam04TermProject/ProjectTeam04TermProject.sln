@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingRoomBookApplication", "ProjectTeam04TermProject\MeetingRoomBookApplication.csproj", "{2FDD311F-583C-405A-A67A-483175A30FD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManagementApplication", "ProjectTeam04TermProject\MeetingManagementApplication.csproj", "{2FDD311F-583C-405A-A67A-483175A30FD4}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MeetingRoomBookingDatabase", "MeetingRoomBookingDatabase\MeetingRoomBookingDatabase.sqlproj", "{BED5BD16-5F63-44DA-AAE7-C81B331555D9}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MeetingManagementDatabase", "MeetingManagementDatabase\MeetingManagementDatabase.sqlproj", "{BED5BD16-5F63-44DA-AAE7-C81B331555D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingRoomBookingDataSeed", "MeetingRoomBookingDataSeed\MeetingRoomBookingDataSeed.csproj", "{4B426B8D-B855-492F-9D91-C5A83A513F36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManagementDataSeed", "MeetingManagementDataSeed\MeetingManagementDataSeed.csproj", "{4B426B8D-B855-492F-9D91-C5A83A513F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManagementClassLibrary", "MeetingManagementClassLibrary\MeetingManagementClassLibrary.csproj", "{06573F1E-E9EA-4D79-B6D5-DF46987634CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{4B426B8D-B855-492F-9D91-C5A83A513F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B426B8D-B855-492F-9D91-C5A83A513F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B426B8D-B855-492F-9D91-C5A83A513F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06573F1E-E9EA-4D79-B6D5-DF46987634CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06573F1E-E9EA-4D79-B6D5-DF46987634CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06573F1E-E9EA-4D79-B6D5-DF46987634CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06573F1E-E9EA-4D79-B6D5-DF46987634CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
