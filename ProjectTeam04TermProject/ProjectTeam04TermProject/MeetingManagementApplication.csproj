@@ -58,23 +58,23 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageGroupControl.cs">
+    <Compile Include="ManageGroupTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManageGroupControl.Designer.cs">
-      <DependentUpon>ManageGroupControl.cs</DependentUpon>
+    <Compile Include="ManageGroupTabControl.Designer.cs">
+      <DependentUpon>ManageGroupTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMeetingControl.cs">
+    <Compile Include="ManageMeetingTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManageMeetingControl.Designer.cs">
-      <DependentUpon>ManageMeetingControl.cs</DependentUpon>
+    <Compile Include="ManageMeetingTabControl.Designer.cs">
+      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMeetingRoomControl.cs">
+    <Compile Include="ManageMeetingRoomTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManageMeetingRoomControl.Designer.cs">
-      <DependentUpon>ManageMeetingRoomControl.cs</DependentUpon>
+    <Compile Include="ManageMeetingRoomTabControl.Designer.cs">
+      <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MeetingManagementProgram.cs" />
     <Compile Include="MyScheduleTabControl.cs">
@@ -89,6 +89,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageGroupTabControl.resx">
+      <DependentUpon>ManageGroupTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMeetingRoomTabControl.resx">
+      <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMeetingTabControl.resx">
+      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyScheduleTabControl.resx">
       <DependentUpon>MyScheduleTabControl.cs</DependentUpon>

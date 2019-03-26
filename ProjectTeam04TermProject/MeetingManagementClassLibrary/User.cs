@@ -14,5 +14,10 @@ namespace MeetingManagementClassLibrary
         public bool IsDisabled { get; set; }
 
         public enum UserRoles { USER, MANAGER, ADMIN }
+
+        public override string ToString()
+        {
+            return Username + " - " + Role.ToString();
+        }
     }
 }

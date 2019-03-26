@@ -51,15 +51,15 @@ namespace ProjectTeam04TermProject
                     break;
                 case User.UserRoles.MANAGER: // Remove Manage Groups Tab
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());
-                    tabPageMySchedule.Controls.Add(new ManageMeetingControl());
-                    tabPageMySchedule.Controls.Add(new ManageMeetingRoomControl());
+                    tabPageManageMeetings.Controls.Add(new ManageMeetingTabControl());
+                    tabPageManageMeetingRooms.Controls.Add(new ManageMeetingRoomTabControl());
                     tabControlMainForm.TabPages.Remove(tabPageManageGroups);
                     break;
                 case User.UserRoles.ADMIN: // Full rights
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());
-                    tabPageMySchedule.Controls.Add(new ManageMeetingControl());
-                    tabPageMySchedule.Controls.Add(new ManageMeetingRoomControl());
-                    tabPageMySchedule.Controls.Add(new ManageGroupControl());
+                    tabPageManageMeetings.Controls.Add(new ManageMeetingTabControl());
+                    tabPageManageMeetingRooms.Controls.Add(new ManageMeetingRoomTabControl());
+                    tabPageManageGroups.Controls.Add(new ManageGroupTabControl());
                     break;
                 default: // Unknown role, default as Normal User
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());

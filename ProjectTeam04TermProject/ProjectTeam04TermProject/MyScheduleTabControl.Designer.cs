@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.labelMyMeetings = new System.Windows.Forms.Label();
-            this.dataGridViewUpcomingMeetings = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMyMeetings = new System.Windows.Forms.DataGridView();
             this.labelMeetingDetail = new System.Windows.Forms.Label();
             this.labelMeetingTitle = new System.Windows.Forms.Label();
             this.labelMeetingDescription = new System.Windows.Forms.Label();
             this.labelDisplayMeetingTitle = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.labelDisplayDescription = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelDisplayDate = new System.Windows.Forms.Label();
@@ -49,10 +48,10 @@
             this.labelMeetingNotes = new System.Windows.Forms.Label();
             this.labelDisplayNotes = new System.Windows.Forms.Label();
             this.checkBoxShowPastMeeting = new System.Windows.Forms.CheckBox();
-            this.labelTextSearch = new System.Windows.Forms.Label();
             this.textBoxTextSearch = new System.Windows.Forms.TextBox();
             this.buttonFilterMeetings = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingMeetings)).BeginInit();
+            this.checkBoxShowTodayMeeting = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMyMeetings)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMyMeetings
@@ -65,17 +64,18 @@
             this.labelMyMeetings.TabIndex = 0;
             this.labelMyMeetings.Text = "My Meetings";
             // 
-            // dataGridViewUpcomingMeetings
+            // dataGridViewMyMeetings
             // 
-            this.dataGridViewUpcomingMeetings.AllowUserToAddRows = false;
-            this.dataGridViewUpcomingMeetings.AllowUserToDeleteRows = false;
-            this.dataGridViewUpcomingMeetings.AllowUserToOrderColumns = true;
-            this.dataGridViewUpcomingMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUpcomingMeetings.Location = new System.Drawing.Point(17, 36);
-            this.dataGridViewUpcomingMeetings.Name = "dataGridViewUpcomingMeetings";
-            this.dataGridViewUpcomingMeetings.RowTemplate.Height = 24;
-            this.dataGridViewUpcomingMeetings.Size = new System.Drawing.Size(841, 200);
-            this.dataGridViewUpcomingMeetings.TabIndex = 1;
+            this.dataGridViewMyMeetings.AllowUserToAddRows = false;
+            this.dataGridViewMyMeetings.AllowUserToDeleteRows = false;
+            this.dataGridViewMyMeetings.AllowUserToOrderColumns = true;
+            this.dataGridViewMyMeetings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMyMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMyMeetings.Location = new System.Drawing.Point(18, 40);
+            this.dataGridViewMyMeetings.Name = "dataGridViewMyMeetings";
+            this.dataGridViewMyMeetings.RowTemplate.Height = 24;
+            this.dataGridViewMyMeetings.Size = new System.Drawing.Size(839, 200);
+            this.dataGridViewMyMeetings.TabIndex = 1;
             // 
             // labelMeetingDetail
             // 
@@ -109,6 +109,7 @@
             // 
             this.labelDisplayMeetingTitle.BackColor = System.Drawing.SystemColors.Control;
             this.labelDisplayMeetingTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDisplayMeetingTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisplayMeetingTitle.Location = new System.Drawing.Point(118, 331);
             this.labelDisplayMeetingTitle.Name = "labelDisplayMeetingTitle";
             this.labelDisplayMeetingTitle.Size = new System.Drawing.Size(739, 23);
@@ -116,6 +117,7 @@
             // 
             // labelDisplayDescription
             // 
+            this.labelDisplayDescription.BackColor = System.Drawing.SystemColors.Control;
             this.labelDisplayDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDisplayDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisplayDescription.Location = new System.Drawing.Point(118, 364);
@@ -234,46 +236,47 @@
             // checkBoxShowPastMeeting
             // 
             this.checkBoxShowPastMeeting.AutoSize = true;
-            this.checkBoxShowPastMeeting.Location = new System.Drawing.Point(466, 250);
+            this.checkBoxShowPastMeeting.Location = new System.Drawing.Point(701, 15);
             this.checkBoxShowPastMeeting.Name = "checkBoxShowPastMeeting";
             this.checkBoxShowPastMeeting.Size = new System.Drawing.Size(156, 21);
             this.checkBoxShowPastMeeting.TabIndex = 21;
             this.checkBoxShowPastMeeting.Text = "Show past meetings";
             this.checkBoxShowPastMeeting.UseVisualStyleBackColor = true;
             // 
-            // labelTextSearch
-            // 
-            this.labelTextSearch.AutoSize = true;
-            this.labelTextSearch.Location = new System.Drawing.Point(17, 251);
-            this.labelTextSearch.Name = "labelTextSearch";
-            this.labelTextSearch.Size = new System.Drawing.Size(53, 17);
-            this.labelTextSearch.TabIndex = 22;
-            this.labelTextSearch.Text = "Search";
-            // 
             // textBoxTextSearch
             // 
             this.textBoxTextSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTextSearch.Location = new System.Drawing.Point(119, 246);
+            this.textBoxTextSearch.Location = new System.Drawing.Point(391, 245);
             this.textBoxTextSearch.Name = "textBoxTextSearch";
-            this.textBoxTextSearch.Size = new System.Drawing.Size(259, 27);
+            this.textBoxTextSearch.Size = new System.Drawing.Size(319, 27);
             this.textBoxTextSearch.TabIndex = 23;
             // 
             // buttonFilterMeetings
             // 
-            this.buttonFilterMeetings.Location = new System.Drawing.Point(716, 243);
+            this.buttonFilterMeetings.Location = new System.Drawing.Point(716, 245);
             this.buttonFilterMeetings.Name = "buttonFilterMeetings";
-            this.buttonFilterMeetings.Size = new System.Drawing.Size(141, 32);
+            this.buttonFilterMeetings.Size = new System.Drawing.Size(141, 27);
             this.buttonFilterMeetings.TabIndex = 24;
-            this.buttonFilterMeetings.Text = "Filter Meetings";
+            this.buttonFilterMeetings.Text = "Search Meetings";
             this.buttonFilterMeetings.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxShowTodayMeeting
+            // 
+            this.checkBoxShowTodayMeeting.AutoSize = true;
+            this.checkBoxShowTodayMeeting.Location = new System.Drawing.Point(465, 15);
+            this.checkBoxShowTodayMeeting.Name = "checkBoxShowTodayMeeting";
+            this.checkBoxShowTodayMeeting.Size = new System.Drawing.Size(194, 21);
+            this.checkBoxShowTodayMeeting.TabIndex = 25;
+            this.checkBoxShowTodayMeeting.Text = "Show only today meetings";
+            this.checkBoxShowTodayMeeting.UseVisualStyleBackColor = true;
             // 
             // MyScheduleTabControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBoxShowTodayMeeting);
             this.Controls.Add(this.buttonFilterMeetings);
             this.Controls.Add(this.textBoxTextSearch);
-            this.Controls.Add(this.labelTextSearch);
             this.Controls.Add(this.checkBoxShowPastMeeting);
             this.Controls.Add(this.labelDisplayNotes);
             this.Controls.Add(this.labelMeetingNotes);
@@ -292,11 +295,11 @@
             this.Controls.Add(this.labelMeetingDescription);
             this.Controls.Add(this.labelMeetingTitle);
             this.Controls.Add(this.labelMeetingDetail);
-            this.Controls.Add(this.dataGridViewUpcomingMeetings);
+            this.Controls.Add(this.dataGridViewMyMeetings);
             this.Controls.Add(this.labelMyMeetings);
             this.Name = "MyScheduleTabControl";
-            this.Size = new System.Drawing.Size(882, 569);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingMeetings)).EndInit();
+            this.Size = new System.Drawing.Size(880, 569);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMyMeetings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,12 +308,11 @@
         #endregion
 
         private System.Windows.Forms.Label labelMyMeetings;
-        private System.Windows.Forms.DataGridView dataGridViewUpcomingMeetings;
+        private System.Windows.Forms.DataGridView dataGridViewMyMeetings;
         private System.Windows.Forms.Label labelMeetingDetail;
         private System.Windows.Forms.Label labelMeetingTitle;
         private System.Windows.Forms.Label labelMeetingDescription;
         private System.Windows.Forms.Label labelDisplayMeetingTitle;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label labelDisplayDescription;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelDisplayDate;
@@ -325,8 +327,8 @@
         private System.Windows.Forms.Label labelMeetingNotes;
         private System.Windows.Forms.Label labelDisplayNotes;
         private System.Windows.Forms.CheckBox checkBoxShowPastMeeting;
-        private System.Windows.Forms.Label labelTextSearch;
         private System.Windows.Forms.TextBox textBoxTextSearch;
         private System.Windows.Forms.Button buttonFilterMeetings;
+        private System.Windows.Forms.CheckBox checkBoxShowTodayMeeting;
     }
 }

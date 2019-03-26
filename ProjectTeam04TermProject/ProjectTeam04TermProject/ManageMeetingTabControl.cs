@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectTeam04TermProject
 {
-    public partial class ManageMeetingRoomControl : UserControl
+    public partial class ManageMeetingTabControl : UserControl
     {
-        public ManageMeetingRoomControl()
+        public ManageMeetingTabControl()
         {
             InitializeComponent();
         }
