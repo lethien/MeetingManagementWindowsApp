@@ -1,23 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace MeetingManagementClassLibrary
 {
-    public class User
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("User")]
+    public partial class User
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public UserRoles Role { get; set; }
-        public bool IsDisabled { get; set; }
-
-        public enum UserRoles { USER, MANAGER, ADMIN }
-
-        public override string ToString()
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
         {
-            return Username + " - " + Role.ToString();
+            Meetings = new HashSet<Meeting>();
+            Groups = new HashSet<Group>();
+            Meetings1 = new HashSet<Meeting>();
         }
+
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Username { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string Role { get; set; }
+
+        public bool Disabled { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Meeting> Meetings { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Group> Groups { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Meeting> Meetings1 { get; set; }
     }
 }

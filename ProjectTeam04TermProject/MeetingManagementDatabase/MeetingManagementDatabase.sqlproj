@@ -58,4 +58,13 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Meeting.sql" />
+    <Build Include="User.sql" />
+    <Build Include="Group.sql" />
+    <Build Include="MeetingRoom.sql" />
+    <Build Include="GroupUser.sql" />
+    <Build Include="MeetingUser.sql" />
+    <Build Include="MeetingGroup.sql" />
+  </ItemGroup>
 </Project>

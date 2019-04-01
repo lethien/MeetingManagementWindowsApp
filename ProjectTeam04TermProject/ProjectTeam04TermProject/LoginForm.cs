@@ -54,8 +54,8 @@ namespace ProjectTeam04TermProject
             {
                 Id = 1,
                 Username = "admin",
-                Role = User.UserRoles.ADMIN,
-                IsDisabled = false
+                Role = Constants.USER_ROLE_ADMIN,
+                Disabled = false
             };
 
             // Return the result

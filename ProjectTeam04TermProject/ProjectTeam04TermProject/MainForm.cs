@@ -43,19 +43,19 @@ namespace ProjectTeam04TermProject
             // Remove Tab Pages based on User's Role
             switch (User.Role)
             {
-                case User.UserRoles.USER: // Only show My Schedule Tab
+                case Constants.USER_ROLE_USER: // Only show My Schedule Tab
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());
                     tabControlMainForm.TabPages.Remove(tabPageManageMeetings);
                     tabControlMainForm.TabPages.Remove(tabPageManageMeetingRooms);
                     tabControlMainForm.TabPages.Remove(tabPageManageGroups);
                     break;
-                case User.UserRoles.MANAGER: // Remove Manage Groups Tab
+                case Constants.USER_ROLE_MANAGER: // Remove Manage Groups Tab
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());
                     tabPageManageMeetings.Controls.Add(new ManageMeetingTabControl());
                     tabPageManageMeetingRooms.Controls.Add(new ManageMeetingRoomTabControl());
                     tabControlMainForm.TabPages.Remove(tabPageManageGroups);
                     break;
-                case User.UserRoles.ADMIN: // Full rights
+                case Constants.USER_ROLE_ADMIN: // Full rights
                     tabPageMySchedule.Controls.Add(new MyScheduleTabControl());
                     tabPageManageMeetings.Controls.Add(new ManageMeetingTabControl());
                     tabPageManageMeetingRooms.Controls.Add(new ManageMeetingRoomTabControl());
