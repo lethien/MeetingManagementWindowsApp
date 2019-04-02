@@ -14,7 +14,7 @@ namespace MeetingManagementClassLibrary
         {
             Meetings = new HashSet<Meeting>();
             Groups = new HashSet<Group>();
-            Meetings1 = new HashSet<Meeting>();
+            InvitedMeetings = new HashSet<Meeting>();
         }
 
         public int Id { get; set; }
@@ -36,6 +36,11 @@ namespace MeetingManagementClassLibrary
         public virtual ICollection<Group> Groups { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Meeting> Meetings1 { get; set; }
+        public virtual ICollection<Meeting> InvitedMeetings { get; set; }
+
+        public override string ToString()
+        {
+            return Username + " - " + Role;
+        }
     }
 }

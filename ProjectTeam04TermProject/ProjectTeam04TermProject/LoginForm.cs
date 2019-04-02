@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 using MeetingManagementClassLibrary;
 
 namespace ProjectTeam04TermProject
 {
     public partial class LoginForm : Form
     {
+        private MeetingManagementEntities context;
+
         public LoginForm()
         {
             InitializeComponent();
+            
+            context = MainForm.context;
 
             // Bind click event for Login button
             buttonLogin.Click += (s, e) => Login();
@@ -33,9 +38,7 @@ namespace ProjectTeam04TermProject
                 this.Close();
 
                 // Pass login user and show Main form
-                MainForm mainForm = (MainForm) this.Owner;
-                mainForm.User = user;
-                mainForm.Show();
+                MainForm.loggedinUser = user;
             }
             else
             {
@@ -46,27 +49,24 @@ namespace ProjectTeam04TermProject
 
         private User Authenticate()
         {            
+            // Get username from text box
             string username = textBoxUserName.Text;
+            
+            // Get user by username
+            if (username != "")
+            {
+                var loginUser = from user in context.Users
+                                 where user.Username == username
+                                 select user;
 
-            // TODO: authenticate user
-            bool authenticationSuccess = true;
-            User user = new User()
-            {
-                Id = 1,
-                Username = "admin",
-                Role = Constants.USER_ROLE_ADMIN,
-                Disabled = false
-            };
+                if (loginUser != null && loginUser.ToList().Count > 0)
+                {
+                    // Found user with input username
+                    return loginUser.ToList()[0];
+                }
+            }
 
-            // Return the result
-            if (authenticationSuccess)
-            {
-                return user;
-            }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

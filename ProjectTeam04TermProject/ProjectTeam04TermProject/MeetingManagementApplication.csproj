@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,12 +71,6 @@
     <Compile Include="ManageGroupTabControl.Designer.cs">
       <DependentUpon>ManageGroupTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMeetingTabControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ManageMeetingTabControl.Designer.cs">
-      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManageMeetingRoomTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,11 +78,11 @@
       <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MeetingManagementProgram.cs" />
-    <Compile Include="MyScheduleTabControl.cs">
+    <Compile Include="MeetingManageTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MyScheduleTabControl.Designer.cs">
-      <DependentUpon>MyScheduleTabControl.cs</DependentUpon>
+    <Compile Include="MeetingManageTabControl.Designer.cs">
+      <DependentUpon>MeetingManageTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -96,11 +97,8 @@
     <EmbeddedResource Include="ManageMeetingRoomTabControl.resx">
       <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageMeetingTabControl.resx">
-      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyScheduleTabControl.resx">
-      <DependentUpon>MyScheduleTabControl.cs</DependentUpon>
+    <EmbeddedResource Include="MeetingManageTabControl.resx">
+      <DependentUpon>MeetingManageTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

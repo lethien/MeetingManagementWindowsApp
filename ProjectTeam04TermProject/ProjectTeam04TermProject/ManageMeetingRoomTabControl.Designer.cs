@@ -45,13 +45,13 @@
             this.panelHasPhoneRadioGroup = new System.Windows.Forms.Panel();
             this.labelHasProjector = new System.Windows.Forms.Label();
             this.panelHasProjectorRadioGroup = new System.Windows.Forms.Panel();
-            this.radioButtonHasProjectorYes = new System.Windows.Forms.RadioButton();
             this.radioButtonHasProjectorNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonHasProjectorYes = new System.Windows.Forms.RadioButton();
             this.buttonUpdateRoom = new System.Windows.Forms.Button();
             this.labelIsDisabled = new System.Windows.Forms.Label();
             this.panelDisabledRadioGroup = new System.Windows.Forms.Panel();
-            this.radioButtonDisabledYes = new System.Windows.Forms.RadioButton();
             this.radioButtonDisabledNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonDisabledYes = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeetingRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingMeetings)).BeginInit();
             this.panelHasPhoneRadioGroup.SuspendLayout();
@@ -65,7 +65,7 @@
             this.dataGridViewMeetingRooms.Location = new System.Drawing.Point(23, 41);
             this.dataGridViewMeetingRooms.Name = "dataGridViewMeetingRooms";
             this.dataGridViewMeetingRooms.RowTemplate.Height = 24;
-            this.dataGridViewMeetingRooms.Size = new System.Drawing.Size(403, 208);
+            this.dataGridViewMeetingRooms.Size = new System.Drawing.Size(310, 208);
             this.dataGridViewMeetingRooms.TabIndex = 0;
             // 
             // labelMeetingRooms
@@ -80,7 +80,7 @@
             // labelUpcomingMeetings
             // 
             this.labelUpcomingMeetings.AutoSize = true;
-            this.labelUpcomingMeetings.Location = new System.Drawing.Point(452, 21);
+            this.labelUpcomingMeetings.Location = new System.Drawing.Point(365, 21);
             this.labelUpcomingMeetings.Name = "labelUpcomingMeetings";
             this.labelUpcomingMeetings.Size = new System.Drawing.Size(132, 17);
             this.labelUpcomingMeetings.TabIndex = 2;
@@ -89,10 +89,10 @@
             // dataGridViewUpcomingMeetings
             // 
             this.dataGridViewUpcomingMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUpcomingMeetings.Location = new System.Drawing.Point(455, 42);
+            this.dataGridViewUpcomingMeetings.Location = new System.Drawing.Point(368, 42);
             this.dataGridViewUpcomingMeetings.Name = "dataGridViewUpcomingMeetings";
             this.dataGridViewUpcomingMeetings.RowTemplate.Height = 24;
-            this.dataGridViewUpcomingMeetings.Size = new System.Drawing.Size(400, 207);
+            this.dataGridViewUpcomingMeetings.Size = new System.Drawing.Size(487, 207);
             this.dataGridViewUpcomingMeetings.TabIndex = 3;
             // 
             // labelMeetingRoomDetail
@@ -213,17 +213,6 @@
             this.panelHasProjectorRadioGroup.Size = new System.Drawing.Size(278, 36);
             this.panelHasProjectorRadioGroup.TabIndex = 16;
             // 
-            // radioButtonHasProjectorYes
-            // 
-            this.radioButtonHasProjectorYes.AutoSize = true;
-            this.radioButtonHasProjectorYes.Location = new System.Drawing.Point(4, 13);
-            this.radioButtonHasProjectorYes.Name = "radioButtonHasProjectorYes";
-            this.radioButtonHasProjectorYes.Size = new System.Drawing.Size(53, 21);
-            this.radioButtonHasProjectorYes.TabIndex = 0;
-            this.radioButtonHasProjectorYes.TabStop = true;
-            this.radioButtonHasProjectorYes.Text = "Yes";
-            this.radioButtonHasProjectorYes.UseVisualStyleBackColor = true;
-            // 
             // radioButtonHasProjectorNo
             // 
             this.radioButtonHasProjectorNo.AutoSize = true;
@@ -234,6 +223,17 @@
             this.radioButtonHasProjectorNo.TabStop = true;
             this.radioButtonHasProjectorNo.Text = "No";
             this.radioButtonHasProjectorNo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonHasProjectorYes
+            // 
+            this.radioButtonHasProjectorYes.AutoSize = true;
+            this.radioButtonHasProjectorYes.Location = new System.Drawing.Point(4, 13);
+            this.radioButtonHasProjectorYes.Name = "radioButtonHasProjectorYes";
+            this.radioButtonHasProjectorYes.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonHasProjectorYes.TabIndex = 0;
+            this.radioButtonHasProjectorYes.TabStop = true;
+            this.radioButtonHasProjectorYes.Text = "Yes";
+            this.radioButtonHasProjectorYes.UseVisualStyleBackColor = true;
             // 
             // buttonUpdateRoom
             // 
@@ -262,17 +262,6 @@
             this.panelDisabledRadioGroup.Size = new System.Drawing.Size(278, 36);
             this.panelDisabledRadioGroup.TabIndex = 19;
             // 
-            // radioButtonDisabledYes
-            // 
-            this.radioButtonDisabledYes.AutoSize = true;
-            this.radioButtonDisabledYes.Location = new System.Drawing.Point(4, 10);
-            this.radioButtonDisabledYes.Name = "radioButtonDisabledYes";
-            this.radioButtonDisabledYes.Size = new System.Drawing.Size(53, 21);
-            this.radioButtonDisabledYes.TabIndex = 0;
-            this.radioButtonDisabledYes.TabStop = true;
-            this.radioButtonDisabledYes.Text = "Yes";
-            this.radioButtonDisabledYes.UseVisualStyleBackColor = true;
-            // 
             // radioButtonDisabledNo
             // 
             this.radioButtonDisabledNo.AutoSize = true;
@@ -283,6 +272,17 @@
             this.radioButtonDisabledNo.TabStop = true;
             this.radioButtonDisabledNo.Text = "No";
             this.radioButtonDisabledNo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDisabledYes
+            // 
+            this.radioButtonDisabledYes.AutoSize = true;
+            this.radioButtonDisabledYes.Location = new System.Drawing.Point(4, 10);
+            this.radioButtonDisabledYes.Name = "radioButtonDisabledYes";
+            this.radioButtonDisabledYes.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonDisabledYes.TabIndex = 0;
+            this.radioButtonDisabledYes.TabStop = true;
+            this.radioButtonDisabledYes.Text = "Yes";
+            this.radioButtonDisabledYes.UseVisualStyleBackColor = true;
             // 
             // ManageMeetingRoomTabControl
             // 

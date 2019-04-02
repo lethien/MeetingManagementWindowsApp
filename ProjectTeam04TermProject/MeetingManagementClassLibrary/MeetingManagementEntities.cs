@@ -35,7 +35,7 @@ namespace MeetingManagementClassLibrary
 
             modelBuilder.Entity<Meeting>()
                 .HasMany(e => e.Users)
-                .WithMany(e => e.Meetings1)
+                .WithMany(e => e.InvitedMeetings)
                 .Map(m => m.ToTable("MeetingUser").MapLeftKey("MeetingId").MapRightKey("UserId"));
 
             modelBuilder.Entity<MeetingRoom>()

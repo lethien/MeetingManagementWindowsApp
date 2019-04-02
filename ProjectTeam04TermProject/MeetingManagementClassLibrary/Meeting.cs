@@ -26,12 +26,11 @@ namespace MeetingManagementClassLibrary
         [StringLength(255)]
         public string Description { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime Date { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime From { get; set; }
 
-        public TimeSpan From { get; set; }
-
-        public TimeSpan To { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime To { get; set; }
 
         public int MeetingRoomId { get; set; }
 
