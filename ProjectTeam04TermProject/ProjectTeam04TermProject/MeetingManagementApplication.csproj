@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMeetingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMeetingForm.Designer.cs">
+      <DependentUpon>AddMeetingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,20 +77,40 @@
     <Compile Include="ManageGroupTabControl.Designer.cs">
       <DependentUpon>ManageGroupTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageMeetingParticipantsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMeetingParticipantsForm.Designer.cs">
+      <DependentUpon>ManageMeetingParticipantsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageMeetingRoomTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ManageMeetingRoomTabControl.Designer.cs">
       <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeetingManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeetingManagementDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MeetingManagementProgram.cs" />
-    <Compile Include="MeetingManageTabControl.cs">
+    <Compile Include="ManageMeetingTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MeetingManageTabControl.Designer.cs">
-      <DependentUpon>MeetingManageTabControl.cs</DependentUpon>
+    <Compile Include="ManageMeetingTabControl.Designer.cs">
+      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XMLTabControl.Designer.cs">
+      <DependentUpon>XMLTabControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMeetingForm.resx">
+      <DependentUpon>AddMeetingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,11 +120,14 @@
     <EmbeddedResource Include="ManageGroupTabControl.resx">
       <DependentUpon>ManageGroupTabControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageMeetingParticipantsForm.resx">
+      <DependentUpon>ManageMeetingParticipantsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageMeetingRoomTabControl.resx">
       <DependentUpon>ManageMeetingRoomTabControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MeetingManageTabControl.resx">
-      <DependentUpon>MeetingManageTabControl.cs</DependentUpon>
+    <EmbeddedResource Include="ManageMeetingTabControl.resx">
+      <DependentUpon>ManageMeetingTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +138,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="XMLTabControl.resx">
+      <DependentUpon>XMLTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MeetingManagementDataSet.xsc">
+      <DependentUpon>MeetingManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MeetingManagementDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MeetingManagementDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MeetingManagementDataSet.xss">
+      <DependentUpon>MeetingManagementDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

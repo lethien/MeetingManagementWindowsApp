@@ -52,6 +52,8 @@
             this.panelDisabledRadioGroup = new System.Windows.Forms.Panel();
             this.radioButtonDisabledNo = new System.Windows.Forms.RadioButton();
             this.radioButtonDisabledYes = new System.Windows.Forms.RadioButton();
+            this.buttonAddMeetingRoom = new System.Windows.Forms.Button();
+            this.buttonCancelUpdateRoom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeetingRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingMeetings)).BeginInit();
             this.panelHasPhoneRadioGroup.SuspendLayout();
@@ -62,25 +64,27 @@
             // dataGridViewMeetingRooms
             // 
             this.dataGridViewMeetingRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMeetingRooms.Location = new System.Drawing.Point(23, 41);
+            this.dataGridViewMeetingRooms.Location = new System.Drawing.Point(24, 57);
+            this.dataGridViewMeetingRooms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewMeetingRooms.Name = "dataGridViewMeetingRooms";
             this.dataGridViewMeetingRooms.RowTemplate.Height = 24;
-            this.dataGridViewMeetingRooms.Size = new System.Drawing.Size(310, 208);
+            this.dataGridViewMeetingRooms.Size = new System.Drawing.Size(309, 208);
             this.dataGridViewMeetingRooms.TabIndex = 0;
             // 
             // labelMeetingRooms
             // 
             this.labelMeetingRooms.AutoSize = true;
+            this.labelMeetingRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMeetingRooms.Location = new System.Drawing.Point(20, 21);
             this.labelMeetingRooms.Name = "labelMeetingRooms";
-            this.labelMeetingRooms.Size = new System.Drawing.Size(106, 17);
+            this.labelMeetingRooms.Size = new System.Drawing.Size(143, 24);
             this.labelMeetingRooms.TabIndex = 1;
             this.labelMeetingRooms.Text = "Meeting Rooms";
             // 
             // labelUpcomingMeetings
             // 
             this.labelUpcomingMeetings.AutoSize = true;
-            this.labelUpcomingMeetings.Location = new System.Drawing.Point(365, 21);
+            this.labelUpcomingMeetings.Location = new System.Drawing.Point(365, 32);
             this.labelUpcomingMeetings.Name = "labelUpcomingMeetings";
             this.labelUpcomingMeetings.Size = new System.Drawing.Size(132, 17);
             this.labelUpcomingMeetings.TabIndex = 2;
@@ -89,7 +93,8 @@
             // dataGridViewUpcomingMeetings
             // 
             this.dataGridViewUpcomingMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUpcomingMeetings.Location = new System.Drawing.Point(368, 42);
+            this.dataGridViewUpcomingMeetings.Location = new System.Drawing.Point(369, 57);
+            this.dataGridViewUpcomingMeetings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewUpcomingMeetings.Name = "dataGridViewUpcomingMeetings";
             this.dataGridViewUpcomingMeetings.RowTemplate.Height = 24;
             this.dataGridViewUpcomingMeetings.Size = new System.Drawing.Size(487, 207);
@@ -98,7 +103,7 @@
             // labelMeetingRoomDetail
             // 
             this.labelMeetingRoomDetail.AutoSize = true;
-            this.labelMeetingRoomDetail.Location = new System.Drawing.Point(23, 277);
+            this.labelMeetingRoomDetail.Location = new System.Drawing.Point(20, 298);
             this.labelMeetingRoomDetail.Name = "labelMeetingRoomDetail";
             this.labelMeetingRoomDetail.Size = new System.Drawing.Size(139, 17);
             this.labelMeetingRoomDetail.TabIndex = 4;
@@ -107,7 +112,7 @@
             // labelRoomName
             // 
             this.labelRoomName.AutoSize = true;
-            this.labelRoomName.Location = new System.Drawing.Point(26, 308);
+            this.labelRoomName.Location = new System.Drawing.Point(24, 329);
             this.labelRoomName.Name = "labelRoomName";
             this.labelRoomName.Size = new System.Drawing.Size(45, 17);
             this.labelRoomName.TabIndex = 5;
@@ -116,7 +121,8 @@
             // textBoxRoomName
             // 
             this.textBoxRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRoomName.Location = new System.Drawing.Point(160, 303);
+            this.textBoxRoomName.Location = new System.Drawing.Point(157, 324);
+            this.textBoxRoomName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRoomName.Name = "textBoxRoomName";
             this.textBoxRoomName.Size = new System.Drawing.Size(451, 27);
             this.textBoxRoomName.TabIndex = 6;
@@ -124,7 +130,7 @@
             // labelRoomLocation
             // 
             this.labelRoomLocation.AutoSize = true;
-            this.labelRoomLocation.Location = new System.Drawing.Point(26, 346);
+            this.labelRoomLocation.Location = new System.Drawing.Point(24, 367);
             this.labelRoomLocation.Name = "labelRoomLocation";
             this.labelRoomLocation.Size = new System.Drawing.Size(62, 17);
             this.labelRoomLocation.TabIndex = 7;
@@ -133,7 +139,8 @@
             // textBoxRoomLocation
             // 
             this.textBoxRoomLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRoomLocation.Location = new System.Drawing.Point(160, 341);
+            this.textBoxRoomLocation.Location = new System.Drawing.Point(157, 362);
+            this.textBoxRoomLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRoomLocation.Name = "textBoxRoomLocation";
             this.textBoxRoomLocation.Size = new System.Drawing.Size(451, 27);
             this.textBoxRoomLocation.TabIndex = 8;
@@ -141,7 +148,7 @@
             // labelNumberOfSeats
             // 
             this.labelNumberOfSeats.AutoSize = true;
-            this.labelNumberOfSeats.Location = new System.Drawing.Point(26, 384);
+            this.labelNumberOfSeats.Location = new System.Drawing.Point(24, 405);
             this.labelNumberOfSeats.Name = "labelNumberOfSeats";
             this.labelNumberOfSeats.Size = new System.Drawing.Size(114, 17);
             this.labelNumberOfSeats.TabIndex = 9;
@@ -150,15 +157,16 @@
             // textBoxNumberOfSeats
             // 
             this.textBoxNumberOfSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumberOfSeats.Location = new System.Drawing.Point(160, 379);
+            this.textBoxNumberOfSeats.Location = new System.Drawing.Point(157, 400);
+            this.textBoxNumberOfSeats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumberOfSeats.Name = "textBoxNumberOfSeats";
-            this.textBoxNumberOfSeats.Size = new System.Drawing.Size(110, 27);
+            this.textBoxNumberOfSeats.Size = new System.Drawing.Size(111, 27);
             this.textBoxNumberOfSeats.TabIndex = 10;
             // 
             // labelHasPhone
             // 
             this.labelHasPhone.AutoSize = true;
-            this.labelHasPhone.Location = new System.Drawing.Point(26, 422);
+            this.labelHasPhone.Location = new System.Drawing.Point(24, 443);
             this.labelHasPhone.Name = "labelHasPhone";
             this.labelHasPhone.Size = new System.Drawing.Size(78, 17);
             this.labelHasPhone.TabIndex = 11;
@@ -167,7 +175,8 @@
             // radioButtonHasPhoneYes
             // 
             this.radioButtonHasPhoneYes.AutoSize = true;
-            this.radioButtonHasPhoneYes.Location = new System.Drawing.Point(3, 13);
+            this.radioButtonHasPhoneYes.Location = new System.Drawing.Point(3, 14);
+            this.radioButtonHasPhoneYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonHasPhoneYes.Name = "radioButtonHasPhoneYes";
             this.radioButtonHasPhoneYes.Size = new System.Drawing.Size(53, 21);
             this.radioButtonHasPhoneYes.TabIndex = 12;
@@ -178,7 +187,8 @@
             // radioButtonHasPhoneNo
             // 
             this.radioButtonHasPhoneNo.AutoSize = true;
-            this.radioButtonHasPhoneNo.Location = new System.Drawing.Point(149, 13);
+            this.radioButtonHasPhoneNo.Location = new System.Drawing.Point(149, 14);
+            this.radioButtonHasPhoneNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonHasPhoneNo.Name = "radioButtonHasPhoneNo";
             this.radioButtonHasPhoneNo.Size = new System.Drawing.Size(47, 21);
             this.radioButtonHasPhoneNo.TabIndex = 13;
@@ -190,15 +200,16 @@
             // 
             this.panelHasPhoneRadioGroup.Controls.Add(this.radioButtonHasPhoneYes);
             this.panelHasPhoneRadioGroup.Controls.Add(this.radioButtonHasPhoneNo);
-            this.panelHasPhoneRadioGroup.Location = new System.Drawing.Point(160, 412);
+            this.panelHasPhoneRadioGroup.Location = new System.Drawing.Point(157, 433);
+            this.panelHasPhoneRadioGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHasPhoneRadioGroup.Name = "panelHasPhoneRadioGroup";
-            this.panelHasPhoneRadioGroup.Size = new System.Drawing.Size(278, 36);
+            this.panelHasPhoneRadioGroup.Size = new System.Drawing.Size(277, 36);
             this.panelHasPhoneRadioGroup.TabIndex = 14;
             // 
             // labelHasProjector
             // 
             this.labelHasProjector.AutoSize = true;
-            this.labelHasProjector.Location = new System.Drawing.Point(26, 464);
+            this.labelHasProjector.Location = new System.Drawing.Point(24, 485);
             this.labelHasProjector.Name = "labelHasProjector";
             this.labelHasProjector.Size = new System.Drawing.Size(94, 17);
             this.labelHasProjector.TabIndex = 15;
@@ -208,15 +219,17 @@
             // 
             this.panelHasProjectorRadioGroup.Controls.Add(this.radioButtonHasProjectorNo);
             this.panelHasProjectorRadioGroup.Controls.Add(this.radioButtonHasProjectorYes);
-            this.panelHasProjectorRadioGroup.Location = new System.Drawing.Point(160, 454);
+            this.panelHasProjectorRadioGroup.Location = new System.Drawing.Point(157, 475);
+            this.panelHasProjectorRadioGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHasProjectorRadioGroup.Name = "panelHasProjectorRadioGroup";
-            this.panelHasProjectorRadioGroup.Size = new System.Drawing.Size(278, 36);
+            this.panelHasProjectorRadioGroup.Size = new System.Drawing.Size(277, 36);
             this.panelHasProjectorRadioGroup.TabIndex = 16;
             // 
             // radioButtonHasProjectorNo
             // 
             this.radioButtonHasProjectorNo.AutoSize = true;
-            this.radioButtonHasProjectorNo.Location = new System.Drawing.Point(149, 13);
+            this.radioButtonHasProjectorNo.Location = new System.Drawing.Point(149, 14);
+            this.radioButtonHasProjectorNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonHasProjectorNo.Name = "radioButtonHasProjectorNo";
             this.radioButtonHasProjectorNo.Size = new System.Drawing.Size(47, 21);
             this.radioButtonHasProjectorNo.TabIndex = 1;
@@ -227,7 +240,8 @@
             // radioButtonHasProjectorYes
             // 
             this.radioButtonHasProjectorYes.AutoSize = true;
-            this.radioButtonHasProjectorYes.Location = new System.Drawing.Point(4, 13);
+            this.radioButtonHasProjectorYes.Location = new System.Drawing.Point(4, 14);
+            this.radioButtonHasProjectorYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonHasProjectorYes.Name = "radioButtonHasProjectorYes";
             this.radioButtonHasProjectorYes.Size = new System.Drawing.Size(53, 21);
             this.radioButtonHasProjectorYes.TabIndex = 0;
@@ -237,7 +251,8 @@
             // 
             // buttonUpdateRoom
             // 
-            this.buttonUpdateRoom.Location = new System.Drawing.Point(496, 477);
+            this.buttonUpdateRoom.Location = new System.Drawing.Point(493, 443);
+            this.buttonUpdateRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUpdateRoom.Name = "buttonUpdateRoom";
             this.buttonUpdateRoom.Size = new System.Drawing.Size(115, 50);
             this.buttonUpdateRoom.TabIndex = 17;
@@ -247,7 +262,7 @@
             // labelIsDisabled
             // 
             this.labelIsDisabled.AutoSize = true;
-            this.labelIsDisabled.Location = new System.Drawing.Point(26, 510);
+            this.labelIsDisabled.Location = new System.Drawing.Point(24, 530);
             this.labelIsDisabled.Name = "labelIsDisabled";
             this.labelIsDisabled.Size = new System.Drawing.Size(77, 17);
             this.labelIsDisabled.TabIndex = 18;
@@ -257,15 +272,17 @@
             // 
             this.panelDisabledRadioGroup.Controls.Add(this.radioButtonDisabledNo);
             this.panelDisabledRadioGroup.Controls.Add(this.radioButtonDisabledYes);
-            this.panelDisabledRadioGroup.Location = new System.Drawing.Point(160, 496);
+            this.panelDisabledRadioGroup.Location = new System.Drawing.Point(157, 517);
+            this.panelDisabledRadioGroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDisabledRadioGroup.Name = "panelDisabledRadioGroup";
-            this.panelDisabledRadioGroup.Size = new System.Drawing.Size(278, 36);
+            this.panelDisabledRadioGroup.Size = new System.Drawing.Size(277, 36);
             this.panelDisabledRadioGroup.TabIndex = 19;
             // 
             // radioButtonDisabledNo
             // 
             this.radioButtonDisabledNo.AutoSize = true;
             this.radioButtonDisabledNo.Location = new System.Drawing.Point(149, 10);
+            this.radioButtonDisabledNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonDisabledNo.Name = "radioButtonDisabledNo";
             this.radioButtonDisabledNo.Size = new System.Drawing.Size(47, 21);
             this.radioButtonDisabledNo.TabIndex = 1;
@@ -277,6 +294,7 @@
             // 
             this.radioButtonDisabledYes.AutoSize = true;
             this.radioButtonDisabledYes.Location = new System.Drawing.Point(4, 10);
+            this.radioButtonDisabledYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonDisabledYes.Name = "radioButtonDisabledYes";
             this.radioButtonDisabledYes.Size = new System.Drawing.Size(53, 21);
             this.radioButtonDisabledYes.TabIndex = 0;
@@ -284,10 +302,31 @@
             this.radioButtonDisabledYes.Text = "Yes";
             this.radioButtonDisabledYes.UseVisualStyleBackColor = true;
             // 
+            // buttonAddMeetingRoom
+            // 
+            this.buttonAddMeetingRoom.Location = new System.Drawing.Point(180, 17);
+            this.buttonAddMeetingRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAddMeetingRoom.Name = "buttonAddMeetingRoom";
+            this.buttonAddMeetingRoom.Size = new System.Drawing.Size(33, 31);
+            this.buttonAddMeetingRoom.TabIndex = 20;
+            this.buttonAddMeetingRoom.Text = "+";
+            this.buttonAddMeetingRoom.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelUpdateRoom
+            // 
+            this.buttonCancelUpdateRoom.Location = new System.Drawing.Point(493, 508);
+            this.buttonCancelUpdateRoom.Name = "buttonCancelUpdateRoom";
+            this.buttonCancelUpdateRoom.Size = new System.Drawing.Size(115, 45);
+            this.buttonCancelUpdateRoom.TabIndex = 21;
+            this.buttonCancelUpdateRoom.Text = "Cancel";
+            this.buttonCancelUpdateRoom.UseVisualStyleBackColor = true;
+            // 
             // ManageMeetingRoomTabControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonCancelUpdateRoom);
+            this.Controls.Add(this.buttonAddMeetingRoom);
             this.Controls.Add(this.panelDisabledRadioGroup);
             this.Controls.Add(this.labelIsDisabled);
             this.Controls.Add(this.buttonUpdateRoom);
@@ -306,6 +345,7 @@
             this.Controls.Add(this.labelUpcomingMeetings);
             this.Controls.Add(this.labelMeetingRooms);
             this.Controls.Add(this.dataGridViewMeetingRooms);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManageMeetingRoomTabControl";
             this.Size = new System.Drawing.Size(880, 569);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeetingRooms)).EndInit();
@@ -347,5 +387,7 @@
         private System.Windows.Forms.Panel panelDisabledRadioGroup;
         private System.Windows.Forms.RadioButton radioButtonDisabledNo;
         private System.Windows.Forms.RadioButton radioButtonDisabledYes;
+        private System.Windows.Forms.Button buttonAddMeetingRoom;
+        private System.Windows.Forms.Button buttonCancelUpdateRoom;
     }
 }

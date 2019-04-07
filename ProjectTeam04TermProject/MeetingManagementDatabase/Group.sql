@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Group]
 (
 	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, 
-    [GroupName] NVARCHAR(100) NOT NULL, 
+    [GroupName] NVARCHAR(100) NOT NULL UNIQUE, 
     [Disabled] BIT NOT NULL DEFAULT 0
 )

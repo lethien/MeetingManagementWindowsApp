@@ -98,7 +98,7 @@ namespace MeetingRoomBookingDataSeed
             // Sample Meetings
             List<Meeting> meetings = new List<Meeting>()
             {
-                new Meeting { Title = "Annual Meeting", Description = "Inform employees about financial status of the company", From = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 30, 0), To = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 4, 0, 0), MeetingRoomId = 1, Notes = "Please be on time", CreatedBy = 1 },
+                new Meeting { Title = "Annual Meeting", Description = "Inform employees about financial status of the company", From = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 30, 0), To = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 16, 0, 0), MeetingRoomId = 1, Notes = "Please be on time", CreatedBy = 1 },
                 new Meeting { Title = "HR Dept Brainstorm", Description = "On how to attract more employees", From = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0), To = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0), MeetingRoomId = 3, Notes = "Please be on time", CreatedBy = 2 }
             };
 
@@ -125,6 +125,9 @@ namespace MeetingRoomBookingDataSeed
             context.Meetings.ToList().ForEach(meeting => System.Console.WriteLine("Id: " + meeting.Id + "; Invited count: " + meeting.Users.Count));
 
             System.Console.WriteLine("----Done seeding Meeting Management database----");
+
+            context.Database.Connection.Close();
+            context.Dispose();
 
             System.Console.ReadLine();
         }

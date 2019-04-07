@@ -29,5 +29,10 @@ namespace MeetingManagementClassLibrary
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Meeting> Meetings { get; set; }
+
+        public override string ToString()
+        {
+            return GroupName;
+        }
     }
 }
